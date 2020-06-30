@@ -1,0 +1,12 @@
+<!--components/x-nav/x-nav.wxml-->
+<view class="nav">
+  <block wx:for="{{navList}}" wx:key="index">
+    <text 
+    class='["nav-item", {{currentIdx === index ? "active" : ""}}]'
+    bind:tap="handleClick"
+    data-index="{{index}}"
+    >
+      {{item}}
+    </text>
+  </block>
+</view>

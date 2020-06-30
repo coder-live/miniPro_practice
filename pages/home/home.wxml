@@ -1,0 +1,17 @@
+<!--pages/home/home.wxml-->
+<view class="home">
+  <scroll-view 
+  scroll-y 
+  scroll-with-animation="true"
+  scroll-top="{{topPosition}}"
+  bindscroll= 'handleScroll'
+  lower-threshold='50'
+  bindscrolltolower="loadMore"
+  class="container">
+    <text>pages/home/home.wxml</text>
+    <x-swiper swiper-items="{{swiperList}}"/>
+    <x-recommend/>
+    <x-nav bind:handelNavclick="typeClick"/>
+    <x-products product-items="{{productList}}"/>
+  </scroll-view>
+</view>

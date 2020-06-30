@@ -1,0 +1,10 @@
+/* pages/home/home.wxss */
+
+.home {
+  height: 100%;
+}
+
+.container {
+  height: 100%;
+  white-space: nowrap;
+}

@@ -1,0 +1,15 @@
+/* components/x-nav/x-nav.wxss */
+.nav {
+  display: flex;
+  padding-bottom: 60rpx;
+  background-color: #fff;
+}
+.nav > .nav-item {
+  flex: 1;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+}
+.nav > .active {
+  color: brown;
+}

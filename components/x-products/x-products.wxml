@@ -1,0 +1,21 @@
+<!--components/products/products.wxml-->
+<view class="product">
+  <block wx:for="{{productItems}}" wx:key="index">
+    <view class="product-item">
+      <view class="content">
+        <image src="{{item.img}}" mode="widthFix"/>
+        <view class="prize">${{item.prize}}</view>
+        <view class="business">
+          <block wx:for="{{item.business}}"
+          wx:for-item="business"
+          wx:for-index="idx"
+          wx:key="idx">
+            <view class="title">{{business.name}}</view>
+            <view class="size">产品规模 - {{business.size}}</view>
+          </block>
+        </view>
+      </view>
+      <view class="title">{{item.title}}</view>
+    </view>
+  </block>
+</view>

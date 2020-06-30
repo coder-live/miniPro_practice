@@ -1,0 +1,6 @@
+<!--pages/home/homeChildren/x-recommend/x-recommend.wxml-->
+<view class="rec">
+  <image class="rec-img" 
+  src="/assets/images/home/recommend_bg.jpg"
+  mode="widthFix"/>
+</view>

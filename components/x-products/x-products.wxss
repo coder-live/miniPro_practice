@@ -1,0 +1,25 @@
+/* components/products/products.wxss */
+.product {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.product > .product-item {
+  flex: 0 0 355rpx;
+  text-align: center;
+  margin: 20rpx 10rpx;
+}
+.product-item > .title {
+  
+}
+.product-item > .content > image {
+  width: 100%;
+}
+.product-item > .content > .business {
+  width: 100%;
+}
+
+.business > .title, .size {
+
+}

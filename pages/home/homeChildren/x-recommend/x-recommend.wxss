@@ -1,0 +1,9 @@
+/* pages/home/homeChildren/x-recommend/x-recommend.wxss */
+  .rec {
+    width: 750rpx;
+    height: 550rpx;
+  }
+.rec-img {
+  width: 750rpx;
+  height: 550rpx;
+}
