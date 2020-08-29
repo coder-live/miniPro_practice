@@ -1,4 +1,7 @@
 /* components/x-swiper/x-swiper.wxss */
+.swiper {
+  height: 350rpx
+}
 .img {
-  width: 750rpx!important;
+  width: 100%;
 }

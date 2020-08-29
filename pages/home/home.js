@@ -1,5 +1,5 @@
 // pages/home/home.js
-import {getSwiper, postProduct} from '../../network/home';
+import {getMultiData, postProduct} from '../../network/home';
 Page({
 
   /**
@@ -7,6 +7,7 @@ Page({
    */
   data: {
     swiperList: [],
+    recommendList: [],
     productList: [],
     allProduct: {
       types: ['pop', 'hot', 'recommend'],
@@ -37,17 +38,28 @@ Page({
   },
   loadMore() {
     // 页面滚动底部
-    console.log(66)
+    console.log('滚动到底部')
     this.getProduct(this.data.allProduct.currentType);
   },
   //-------------------网络请求---------------------------------------
+  _getAllData() {
+    this.getSwiper();
+    this.getProduct(pop);
+    this.getProduct(hot);
+    this.getProduct(recommend);
+  },
   //请求轮播图
   getSwiper() {
-    getSwiper().then(res => {
+    getMultiData().then(res => {
       // console.log(res.code);
-      if(res.code === 0) {
+      if(res.success === true) {
+        // console.log(res.data.banner)
+        const swiperList = res.data.banner.list.map((item) => {
+          return item.image;
+        })
         this.setData({
-          swiperList : res.data[0].swiper
+          swiperList,
+          recommendList: res.data.recommend.list
         })
       }
     }).catch(err => {
@@ -87,37 +99,21 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-    
+  onLoad: function () {
+    this._getAllData();
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    this.getSwiper();
-    // console.log(this)
-    this.getProduct(this.data.allProduct.currentType, true);
+    
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
 
   },
 

@@ -1,9 +1,12 @@
 <!--components/x-swiper/x-swiper.wxml-->
 
-<swiper autoplay="true" 
-indicator-dots indicator-color="#000" 
-indicator-active-color="#fff" 
-circular
+<swiper 
+  class="swiper"
+  autoplay="true" 
+  indicator-dots 
+  indicator-color="#000" 
+  indicator-active-color="#fff" 
+  circular
 >
   <block wx:for="{{swiperItems}}" wx:key="index">
     <swiper-item>

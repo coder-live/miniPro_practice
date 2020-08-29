@@ -1,10 +1,13 @@
-// pages/home/homeChildren/x-recommend/x-recommend.js
+// pages/home/homeChildren/x-re.js
 Component({
   /**
    * 组件的属性列表
    */
   properties: {
-   
+    recommendList: {
+      type: Array,
+      value: []
+    }
   },
 
   /**

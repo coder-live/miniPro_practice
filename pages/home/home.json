@@ -2,6 +2,7 @@
   "usingComponents": {
     "x-swiper": "/components/x-swiper/x-swiper",
     "x-recommend": "./homeChildren/x-recommend/x-recommend",
+    "x-moreIntroduce": "./homeChildren/x-moreIntroduce/x-moreIntroduce",
     "x-nav": "/components/x-nav/x-nav",
     "x-products": "/components/x-products/x-products"
   }

@@ -8,10 +8,10 @@
   lower-threshold='50'
   bindscrolltolower="loadMore"
   class="container">
-    <text>pages/home/home.wxml</text>
-    <x-swiper swiper-items="{{swiperList}}"/>
-    <x-recommend/>
-    <x-nav bind:handelNavclick="typeClick"/>
-    <x-products product-items="{{productList}}"/>
+    <x-swiper swiper-items="{{swiperList}}" />
+    <x-moreIntroduce recommend-list="{{recommendList}}" />
+    <x-recommend />
+    <x-nav bind:handelNavclick="typeClick" />
+    <x-products product-items="{{productList}}" />
   </scroll-view>
 </view>

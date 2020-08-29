@@ -1,0 +1,9 @@
+<!--pages/home/homeChildren/x-re.wxml-->
+<view class='more-introduce'>
+  <block wx:for="{{recommendList}}" wx:key="index">
+    <view class='item'>
+      <image src="{{item.image}}"/>
+      <view><text>{{item.title}}</text></view>
+    </view>
+  </block>
+</view>
